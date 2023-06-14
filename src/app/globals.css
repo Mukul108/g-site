@@ -25,3 +25,75 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+.btn {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+.heading {
+  background-color: transparent;
+  border: none;
+  color: rgb(148, 172, 199);
+  font-size: 6rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.heading:hover {
+  background-color: rgba(158, 139, 139, 0);
+}
+
+.btnContainer {
+  /* Styles for the container of the navigation buttons */
+}
+
+.navBtn {
+  /* Styles for the navigation buttons */
+}
+
+.btn {
+  /* Button styles */
+}
+
+.btn:hover {
+  /* Button hover styles */
+}
+
+.btn::before {
+  /* Button before styles */
+}
+
+.btn:hover::before {
+  /* Button hover before styles */
+}
