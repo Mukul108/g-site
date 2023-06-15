@@ -1,20 +1,7 @@
-import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from './globals.css';
 
-const images = [
-  '/acro1.jpg',
-  '/acro2.jpg',
-  '/acro3.jpg',
-];
-
 export default function Home() {
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  const handleSlideChange = (index) => {
-    setActiveIndex(index);
-  };
-
   return (
     <main className="relative overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -34,37 +21,29 @@ export default function Home() {
             <nav className="flex gap-4">
               <a href="#" className={`btn ${styles.navBtn}`}>About</a>
               <a href="#" className={`btn ${styles.navBtn}`}>Achievements</a>
-              <a href="#" className={`btn ${styles.navBtn}`}>Contact</a>
+              <a href="#" className={`btn ${styles.navBtn}`}>Gallery</a>
+              
+
             </nav>
           </div>
         </header>
 
         <div className="flex justify-center mt-8">
-          <div className={`bg-white bg-opacity-50 rounded-lg p-8 flex items-center justify-center ${styles.contentSquare} mr-4`}>
+          <div className={`bg-white bg-opacity-20 rounded-lg p-10 flex items-center justify-center ${styles.contentSquare} mr-4`}>
             <div>
-              <h2 className="text-2xl font-bold mb-4">We are the Champions</h2>
-              <p>We have broken the record by winning 48 medals in the Senior Nationals 2023-24.</p>
+              <h2 className="text-4xl text-white mb-4">We are the Champions</h2>
+              <p className="text-2xl text-white ">We have broken the record by winning 48 medals in the Senior Nationals 2023-24.</p>
+              <p className="text-2xl text-white ">All the credits goes to our coach Dr. Takdir kundu</p>
             </div>
           </div>
 
-          <div className={`bg-white bg-opacity-50 rounded-lg p-8 flex items-center justify-center ${styles.contentSquare} ml-4`}>
+          <div className={`bg-white bg-opacity-20 rounded-lg p-8 flex items-center justify-center ${styles.contentSquare} ml-4`}>
             <Image
-              src={images[activeIndex]}
+              src="/acro3.jpg"
               alt="Image"
               width={300}
               height={200}
             />
-            <div className="flex mt-4">
-              {images.map((_, index) => (
-                <div
-                  key={index}
-                  className={`w-4 h-4 mx-1 rounded-full cursor-pointer ${
-                    index === activeIndex ? 'bg-black' : 'bg-gray-300'
-                  }`}
-                  onClick={() => handleSlideChange(index)}
-                ></div>
-              ))}
-            </div>
           </div>
         </div>
 
